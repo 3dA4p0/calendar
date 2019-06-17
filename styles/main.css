@@ -1,0 +1,200 @@
+/* Font awesome import */
+
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* Styles for all items */
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+/* Calendar component */
+
+.calendar{
+    width: 298px;
+    height: auto;
+    border: 1px solid #eeeeee;
+    margin: 100px calc(50% - 150px) 100px;
+}
+
+.calendar__header{
+    width: 100%;
+    height: 30px;
+    -webkit-box-shadow: 0 0 20px -2px rgba(0, 0, 0, .4);
+            box-shadow: 0 0 20px -2px rgba(0, 0, 0, .4);
+    position: relative;
+    z-index: 100;
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+    background-color: #fff;
+}
+
+.calendar__title{
+    width: calc(100% - 60px);
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    text-align: center;
+}
+
+.calendar__date{
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #039be5;
+    color: #fff;
+    text-align: center;
+    float: left;
+}
+
+.calendar__arrow{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    float: left;
+    cursor: pointer;
+}
+
+.calendar__arrow-icon{
+    font-size: 14px;
+}
+
+.calendar__weeks{
+    width: 100%;
+    height: 30px;
+    border-bottom: 1px solid #eeeeee;
+    background-color: #039be5;
+    position: relative;
+    z-index: 90;
+}
+
+.calendar__weeks-item{
+    width: calc(100% / 7 - 1px);
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    float: left;
+    color: #fff;
+    border-left: 1px solid #eeeeee;
+}
+
+.calendar__days{
+    width: 100%;
+    height: auto;
+}
+
+.calendar__days-item{
+    width: calc(100% / 7 - 1px);
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    float: left;
+    position: relative;
+    cursor: pointer;
+    color: #212121;
+    border-left: 1px solid #eeeeee;
+    z-index: 80;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+}
+
+.calendar__days-item:hover{
+    z-index: 91;
+    -webkit-box-shadow: 0 0 20px -4px rgba(0, 0, 0, .4);
+            box-shadow: 0 0 20px -4px rgba(0, 0, 0, .4);
+}
+
+.calendar__days-item_event:after{
+    content:"";
+    top: 5px;
+    right: 5px;
+    position: absolute;
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: #039be5;
+}
+
+.calendar__days-item_this-month{
+    background-color: #eeeeee;
+    color: #424242;
+}
+
+.calendar__event-list-prev{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+    color: #424242;
+    position: relative;
+    z-index: 80;
+    margin-top: 20px;
+    background-color: #fafafa;
+}
+
+.calendar__event-list-text{
+    border: 0;
+    width: calc(70% - 10px);
+    height: 30px;
+    position: relative;
+    z-index: 70;
+    margin: 10px 0 10px 10%;
+    padding: 0 5px;
+    background-color: #f5f5f5;
+    color: #424242;
+    float: left;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+}
+
+.calendar__event-list-text:focus{
+    -webkit-box-shadow: 0 0 20px -4px rgba(0, 0, 0, .4);
+            box-shadow: 0 0 20px -4px rgba(0, 0, 0, .4);
+}
+
+.calendar__event-list-prev:hover{
+    -webkit-box-shadow: 0 0 20px -4px rgba(0, 0, 0, .4);
+            box-shadow: 0 0 20px -4px rgba(0, 0, 0, .4);
+}
+
+.calendar__event-list-remove{
+    border: 0;
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    float: left;
+    background-color: #e53935;
+    color: #fff;
+    cursor: pointer;
+}
+
+.calendar__event-list-add{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+    color: #424242;
+    position: relative;
+    z-index: 80;
+    margin-bottom: 20px;
+    background-color: #fafafa;
+}
+
+.calendar__event-list-add:hover{
+    -webkit-box-shadow: 0 0 20px -4px rgba(0, 0, 0, .4);
+            box-shadow: 0 0 20px -4px rgba(0, 0, 0, .4);
+}
